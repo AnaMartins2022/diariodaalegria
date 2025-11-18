@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import { HashRouter } from 'react-router-dom'; // Use HashRouter for GitHub Pages
 
+
 const container = document.getElementById('root');
 const root = createRoot(container!);
 
