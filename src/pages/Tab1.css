@@ -1,0 +1,48 @@
+/* Estilo geral da página */
+.page-content {
+  padding: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #000; /* texto preto */
+}
+
+/* Título principal */
+.page-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Parágrafo introdutório */
+.page-intro {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Modal personalizada */
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #f2f2f2; /* fundo claro */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  z-index: 1000;
+  text-align: left;
+  color: #000; /* texto preto */
+}
+
+/* Lista dentro da modal */
+.modal-container ul {
+  padding-left: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Botão dentro da modal */
+.modal-container .ion-button {
+  margin-top: 1rem;
+}
