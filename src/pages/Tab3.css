@@ -1,0 +1,31 @@
+.sugestoes-content {
+  --padding-top: 1.5rem;
+  --padding-start: 1.5rem;
+  --padding-end: 1.5rem;
+}
+
+.sugestoes-card {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.sugestoes-card h2 {
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.sugestoes-card p {
+  line-height: 1.5;
+  color: #f0f0f0;
+}
+
+.sugestoes-list {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sugestoes-helper {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #f0f0f0;
+}

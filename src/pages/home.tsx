@@ -1,61 +1,94 @@
+import React, { useState } from 'react';
 import {
-  IonContent,
-  IonHeader,
   IonPage,
-  IonTitle,
+  IonHeader,
   IonToolbar,
-  IonCard,
-  IonCardHeader,
-  IonCardTitle,
-  IonCardContent
+  IonTitle,
+  IonContent,
+  IonText,
+  IonButton,
+  IonButtons,
+  IonMenuButton,
+  IonAvatar,
+  IonIcon,
+  IonModal
 } from '@ionic/react';
+import { personCircle } from 'ionicons/icons';
+import './home.css';
 
 const Home: React.FC = () => {
+  const [showLogin, setShowLogin] = useState(false);
+
   return (
-    <IonPage>
+    <IonPage className="dark-page home-page">
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Loja Demo</IonTitle>
+          <IonButtons slot="start">
+            <IonMenuButton />
+          </IonButtons>
+          <IonTitle>Diário da Alegria</IonTitle>
+          <IonButtons slot="end">
+            <IonButton onClick={() => setShowLogin(true)}>
+              <IonAvatar>
+                <IonIcon icon={personCircle} style={{ width: '100%', height: '100%' }} />
+              </IonAvatar>
+            </IonButton>
+          </IonButtons>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Loja Demo</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <div style={{ padding: '16px' }}>
-          <h2 style={{ marginBottom: 8 }}>Bem-vindo</h2>
-          <p style={{ marginTop: 0 }}>
-            Protótipo simples com navegação. Escolhe uma secção.
-          </p>
 
-          <IonCard routerLink="/tab1" button>
-            <IonCardHeader>
-              <IonCardTitle>🛍️ Ver Produtos</IonCardTitle>
-            </IonCardHeader>
-            <IonCardContent>
-              Explora os produtos disponíveis na loja.
-            </IonCardContent>
-          </IonCard>
+      {/* MODAL DE LOGIN (MOCK GOOGLE AUTH) */}
+      <IonModal
+        isOpen={showLogin}
+        onDidDismiss={() => setShowLogin(false)}
+      >
+        <IonContent className="login-modal-content">
+          <div className="login-modal-card">
+            <IonText>
+              <h2>Entrar na conta</h2>
+              <p>
+                Aqui ficará a autenticação real com Google.
+                Neste momento é apenas <strong>(mock)</strong>.
+              </p>
+            </IonText>
 
-          <IonCard routerLink="/tab2" button color="secondary">
-            <IonCardHeader>
-              <IonCardTitle>📚 Ler Artigos</IonCardTitle>
-            </IonCardHeader>
-            <IonCardContent>
-              Descobre conteúdos e artigos informativos.
-            </IonCardContent>
-          </IonCard>
+            <IonButton expand="block" disabled>
+              Continuar com Google (mock)
+            </IonButton>
 
-          <IonCard routerLink="/tab3" button color="tertiary">
-            <IonCardHeader>
-              <IonCardTitle>🖼️ Abrir Galeria</IonCardTitle>
-            </IonCardHeader>
-            <IonCardContent>
-              Vê imagens e inspirações visuais.
-            </IonCardContent>
-          </IonCard>
+            <IonButton
+              expand="block"
+              fill="clear"
+              onClick={() => setShowLogin(false)}
+            >
+              Fechar
+            </IonButton>
+          </div>
+        </IonContent>
+      </IonModal>
+
+      {/* CONTEÚDO PRINCIPAL */}
+      <IonContent className="home-content" fullscreen>
+        <div className="home-card">
+          <IonText>
+            <h1>Seja Bem Vindo!</h1>
+            <p>
+              Regista uma nota por dia, vê sugestões de bem-estar
+              e acompanha o teu relatório semanal.
+            </p>
+          </IonText>
+
+          <div className="home-actions">
+            <IonButton expand="block" routerLink="/tab1">
+              Escrever nota de hoje
+            </IonButton>
+            <IonButton expand="block" routerLink="/tab2" fill="outline">
+              Ver relatório semanal
+            </IonButton>
+            <IonButton expand="block" routerLink="/tab3" fill="outline">
+              Ver sugestões
+            </IonButton>
+          </div>
         </div>
       </IonContent>
     </IonPage>

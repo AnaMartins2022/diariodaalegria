@@ -1,48 +1,39 @@
-/* Estilo geral da página */
-.page-content {
-  padding: 1rem;
-  font-family: 'Segoe UI', sans-serif;
-  color: #000; /* texto preto */
+.nota-content {
+  --padding-top: 1.5rem;
+  --padding-start: 1.5rem;
+  --padding-end: 1.5rem;
 }
 
-/* Título principal */
-.page-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+.nota-card {
+  max-width: 680px;
+  margin: 0 auto;
 }
 
-/* Parágrafo introdutório */
-.page-intro {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+.nota-card h2 {
+  margin-bottom: 0.75rem;
+  color: #ffffff;
 }
 
-/* Modal personalizada */
-.modal-container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #f2f2f2; /* fundo claro */
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  max-width: 90%;
-  z-index: 1000;
-  text-align: left;
-  color: #000; /* texto preto */
+.nota-textarea {
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
 }
 
-/* Lista dentro da modal */
-.modal-container ul {
-  padding-left: 1rem;
-  line-height: 1.6;
-  margin: 0;
+.nota-msg {
+  margin-top: 0.75rem;
+  font-weight: 500;
 }
 
-/* Botão dentro da modal */
-.modal-container .ion-button {
-  margin-top: 1rem;
+.nota-msg.sucesso {
+  color: #4caf50;
+}
+
+.nota-msg.erro {
+  color: #ff5252;
+}
+
+.nota-extra {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #f0f0f0;
 }

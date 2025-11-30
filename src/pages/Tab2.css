@@ -1,0 +1,37 @@
+.relatorio-content {
+  --padding-top: 1.5rem;
+  --padding-start: 1.5rem;
+  --padding-end: 1.5rem;
+}
+
+.relatorio-card {
+  max-width: 680px;
+  margin: 0 auto;
+  background: #181818;
+}
+
+.relatorio-card p {
+  line-height: 1.5;
+  color: #f0f0f0;
+}
+
+.relatorio-palavras {
+  margin-top: 1rem;
+}
+
+.relatorio-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.relatorio-sugestao-final {
+  margin-top: 1.5rem;
+}
+
+.relatorio-helper {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #f0f0f0;
+}
