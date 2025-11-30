@@ -35,4 +35,5 @@ const ArticleDetail: React.FC = () => {
   );
 };
 
+
 export default ArticleDetail;
