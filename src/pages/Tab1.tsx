@@ -81,7 +81,7 @@ const Tab1: React.FC = () => {
       <IonContent className="nota-content" fullscreen>
         <div className="nota-card">
           <IonText>
-            <h2>A tua nota de hoje</h2>
+            <h2>A tua nota de hoje é</h2>
           </IonText>
 
           <IonTextarea
